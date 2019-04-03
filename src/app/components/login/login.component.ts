@@ -38,11 +38,14 @@ export class LoginComponent implements OnInit {
       };
 
       this.service.post('http://localhost:7300/api/login', payload).subscribe((data) => {
-        this.form.reset();
+
         if (data.status === 'success') {
           this.authservice.setUserLogin(true);
           this.authservice.setUserName(this.form.get('username').value);
+          this.form.reset();
           this.router.navigate(['/dashboard']);
+        } else {
+          this.form.reset();
         }
 
       });
