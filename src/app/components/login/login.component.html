@@ -1,0 +1,22 @@
+<div class="login-container">
+  <div class="title">
+    <h2>Login</h2>
+  </div>
+  <div class="loan-wrapper">
+    <form class="login-form" [formGroup]="form" novalidate autocomplete="off" (ngSubmit)="onSubmit()">
+      <div class="field">
+        <input type="text" class="form-control" name="username" formControlName="username" placeholder="User Name"
+          required />
+      </div>
+
+      <div class="field">
+        <input type="password" class="form-control" name="password" formControlName="password" placeholder="Password"
+          required />
+      </div>
+      <div class="field">
+        <button class="btn btn-success" type="submit" [disabled]="!form.valid ">LOGIN</button>
+      </div>
+    </form>
+  </div>
+
+</div>

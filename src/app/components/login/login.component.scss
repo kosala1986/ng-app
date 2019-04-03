@@ -1,0 +1,17 @@
+.login-container {
+    margin-top: 20px;
+    .title {
+        padding: 10px;
+    }
+    .field {
+        padding: 10px;
+        input {
+            width: 300px;
+        }
+
+        .btn {
+            width: 150px;
+            cursor: pointer;
+        }
+    }
+}
